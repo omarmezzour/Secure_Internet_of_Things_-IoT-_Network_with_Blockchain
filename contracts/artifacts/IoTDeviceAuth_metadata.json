@@ -1,0 +1,160 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "DeviceRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "DeviceUnregistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "checkDevice",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "isRegistered",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "registerDevice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "unregisterDevice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Manages authentication and registration of IoT devices.",
+			"kind": "dev",
+			"methods": {
+				"checkDevice(bytes32)": {
+					"details": "Checks if a device is registered.",
+					"params": {
+						"deviceId": "The unique identifier of the device."
+					},
+					"returns": {
+						"_0": "bool True if the device is registered, false otherwise."
+					}
+				},
+				"registerDevice(bytes32)": {
+					"details": "Registers a new IoT device.",
+					"params": {
+						"deviceId": "The unique identifier of the device."
+					}
+				},
+				"unregisterDevice(bytes32)": {
+					"details": "Unregisters an IoT device.",
+					"params": {
+						"deviceId": "The unique identifier of the device."
+					}
+				}
+			},
+			"title": "IoTDeviceAuth",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IoTDeviceAuth.sol": "IoTDeviceAuth"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IoTDeviceAuth.sol": {
+			"keccak256": "0x91f267d0633988c3b21745dd53480f4bee7a5575c4ddccbdff23d7cf31574cac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dabac537ddbe135a544f06120c101a9cb1cf53c3802d86e042a11f3c5ba1e60a",
+				"dweb:/ipfs/QmTfR7Ai1AQmAbWwN2d1rXzaNfhZiDfbSPhGCCv8tBxFpu"
+			]
+		}
+	},
+	"version": 1
+}

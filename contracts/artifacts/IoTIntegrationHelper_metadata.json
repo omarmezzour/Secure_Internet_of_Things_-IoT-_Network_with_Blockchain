@@ -1,0 +1,153 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_dataStorageAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_deviceAuthAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "processedData",
+						"type": "string"
+					}
+				],
+				"name": "DataProcessed",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "getConvertedData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "rawData",
+						"type": "string"
+					}
+				],
+				"name": "processAndStoreData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Facilitates interactions between blockchain systems and IoT devices.",
+			"kind": "dev",
+			"methods": {
+				"getConvertedData(bytes32)": {
+					"details": "Retrieves converted data for a specific IoT device.",
+					"params": {
+						"deviceId": "The unique identifier of the IoT device."
+					},
+					"returns": {
+						"_0": "string The converted data."
+					}
+				},
+				"processAndStoreData(bytes32,string)": {
+					"details": "Processes and stores data from IoT devices, converting if necessary.",
+					"params": {
+						"deviceId": "The unique identifier of the IoT device.",
+						"rawData": "The raw data from the IoT device, might require conversion or validation."
+					}
+				}
+			},
+			"title": "IoTIntegrationHelper",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IoTIntegrationHelper.sol": "IoTIntegrationHelper"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IoTDataStorage.sol": {
+			"keccak256": "0x4f0415035fc8de54f85292240800c0edf52fb64ffb7d010bc09333e936247ea9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e1b6421daaee30bc3b4d617c334f948bb430af7653451fac1395c1de0b93ccd",
+				"dweb:/ipfs/QmYrKfiTkNiffbTs8kEf4fa59M5EumEkCx8gk7poXxhwYh"
+			]
+		},
+		"contracts/IoTDeviceAuth.sol": {
+			"keccak256": "0x91f267d0633988c3b21745dd53480f4bee7a5575c4ddccbdff23d7cf31574cac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dabac537ddbe135a544f06120c101a9cb1cf53c3802d86e042a11f3c5ba1e60a",
+				"dweb:/ipfs/QmTfR7Ai1AQmAbWwN2d1rXzaNfhZiDfbSPhGCCv8tBxFpu"
+			]
+		},
+		"contracts/IoTIntegrationHelper.sol": {
+			"keccak256": "0x5aaff04f772e6c0cf3bb9c70ad962d95f3ca541d198ee31e715e74d3ec4dc326",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3dcbb5f20d8822c4423eb58e5c0b4daca2d0d553cb8c7023fcd0a7d3b0313a88",
+				"dweb:/ipfs/QmedqB56Ki9WfJFnaqqTteqLRCxfzGndXAquageET9FsNS"
+			]
+		}
+	},
+	"version": 1
+}

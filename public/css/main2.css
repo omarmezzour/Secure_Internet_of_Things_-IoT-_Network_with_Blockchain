@@ -1,0 +1,136 @@
+/* Styles généraux pour le corps de la page */
+html, body {
+    height: 100%; /* Assure que la hauteur du html et body s'étend sur tout l'écran */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ecf0f1; /* Couleur de texte clair pour une bonne lisibilité */
+    background: #0d0d21; /* Fond très sombre pour correspondre à l'arrière-plan de l'image */
+}
+
+/* Conteneur principal centré */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacement pour pousser le footer en bas */
+    min-height: calc(100% - 60px); /* Hauteur minimale ajustée pour laisser de l'espace pour le footer */
+}
+
+/* En-tête avec style centré */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a3d; /* Fond sombre assorti avec un effet plus subtil */
+    border-bottom: 3px solid #763bea; /* Bordure inférieure dans une teinte violette néon */
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation sans liste avec éléments en ligne */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #763bea; /* Effet de survol violette néon */
+}
+
+/* Mise en page des cartes de dispositif en grille responsive */
+.device-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styles des cartes de dispositif */
+.device-card {
+    background-color: #252547; /* Fond des cartes en ton sombre pour correspondre à l'ambiance générale */
+    border: 1px solid #763bea; /* Bordure violette néon */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.device-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.75);
+}
+
+.device-card h3, .device-card p {
+    margin: 10px 0;
+}
+
+/* Styles des boutons pour les actions */
+button {
+    display: inline-block;
+    width: 100%; /* Boutons étendus à toute la largeur de la carte */
+    padding: 10px;
+    background-color: #763bea; /* Fond violette néon pour les boutons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-on {
+    background-color: #27ae60; /* Vert pour l'état 'ON' */
+}
+
+.button-off {
+    background-color: #e74c3c; /* Rouge pour l'état 'OFF' */
+}
+
+button:hover {
+    background-color: #b19cd9; /* Gris pour l'effet de survol */
+}
+
+/* Footer style */
+footer {
+    background-color: #1a1a3d; /* Couleur de fond */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #763bea; /* Style cohérent avec le design général */
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #8a2be2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #dcb0ff;
+}

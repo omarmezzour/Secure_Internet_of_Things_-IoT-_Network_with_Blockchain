@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loader.css') }}">
+    <title>Loading...</title>
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            connectMetaMask();
+        });
+
+        async function connectMetaMask() {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    const account = accounts[0];
+                    console.log('MetaMask account:', account);  // Log the account for debugging
+                    await sendAccountToServer(account.toLowerCase());
+
+                    // Redirect to the main page after storing the account
+                    window.location.href = '/main';
+                } catch (error) {
+                    console.error('Error connecting to MetaMask:', error);
+                    // Handle error if needed
+                }
+            } else {
+                alert('MetaMask is not installed. Please consider installing it to use our service.');
+            }
+        }
+        function sendAccountToServer(account) {
+            return fetch('/store_account', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ account })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Server response:', data);  // Log server response for debugging
+                    if (!data.success) {
+                        throw new Error('Failed to store account.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Failed to send account:', error);
+                    throw error;
+                });
+        }
+    </script>
+
+</body>
+
+</html>

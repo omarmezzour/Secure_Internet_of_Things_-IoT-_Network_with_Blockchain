@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Devices Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main2.css') }}">
+    <script src="{{ url_for('static', filename='js/client.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IoT Devices Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a id="disconnect" href="/">Log Out</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="device-container" class="device-container"></div>
+        </main>
+        <footer>
+            <p>© 2024 IoT Devices Dashboard. All rights reserved.</p>
+            <p>Secured by blockchain technology to ensure data integrity and reliability.</p>
+            <p>Contact us: <a href="mailto:support@iotdashboard.com">support@iotdevices.com</a></p>
+        </footer>
+    </div>
+</body>
+</html>

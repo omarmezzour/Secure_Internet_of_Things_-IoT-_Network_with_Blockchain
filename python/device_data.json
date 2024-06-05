@@ -1,0 +1,63 @@
+[
+    {
+        "device_id": "0",
+        "device_transaction" : "" ,
+        "device_type": "sensor",
+        "device_name": "Temp_Sensor",
+        "data_value": 24,
+        "timestamp": "2024-05-30 12:00:00",
+        "isOn": true,
+        "account": "0x2F1A62401CA27De9e97CB46707957294DaadA2C9",
+        "device_gasusage" : "" ,
+        "device_Blocknumber" : ""
+    },
+    {
+        "device_id": "1",
+        "device_transaction" : "" ,
+        "device_type": "actuator",
+        "device_name": "HVAC_Actuator",
+        "data_value": 53,
+        "timestamp": "2024-05-30 12:00:00",
+        "isOn": false,
+        "account": "0x2F1A62401CA27De9e97CB46707957294DaadA2C9",
+        "device_gasusage" : "" ,
+        "device_Blocknumber" : ""
+    },
+    {
+        "device_id": "2",
+        "device_transaction" : "" ,
+        "device_type": "sensor",
+        "device_name": "Humidity_Sensor",
+        "data_value": 8,
+        "timestamp": "2024-05-30 12:00:00",
+        "isOn": false,
+        "account": "0xaE5D37c69218478Cae29A5DAd3dB6B3CDafA8110" ,
+        "device_gasusage" : "" ,
+        "device_Blocknumber" : ""
+        
+    },
+    {
+        "device_id": "3",
+        "device_transaction" : "" ,
+        "device_type": "actuator",
+        "device_name": "Light_Actuator",
+        "data_value": 71,
+        "timestamp": "2024-05-30 12:00:00",
+        "isOn": false,
+        "account": "0xaE5D37c69218478Cae29A5DAd3dB6B3CDafA8110" ,
+        "device_gasusage" : "" ,
+        "device_Blocknumber" : ""
+    },
+    {
+        "device_id": "4",
+        "device_transaction" : "" ,
+        "device_type": "sensor",
+        "device_name": "Pressure_Sensor",
+        "data_value": 67,
+        "timestamp": "2024-05-30 12:00:00",
+        "isOn": true,
+        "account": "0x2F1A62401CA27De9e97CB46707957294DaadA2C9",
+        "device_gasusage" : "" ,
+        "device_Blocknumber" : ""
+    }
+]

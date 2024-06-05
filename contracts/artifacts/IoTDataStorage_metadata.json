@@ -1,0 +1,140 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_authContractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "DataStored",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "storeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Manages secure storage and retrieval of IoT data.",
+			"kind": "dev",
+			"methods": {
+				"getData(bytes32)": {
+					"details": "Retrieves data for a specific IoT device.",
+					"params": {
+						"deviceId": "The unique identifier of the device."
+					},
+					"returns": {
+						"_0": "string The stored data."
+					}
+				},
+				"storeData(bytes32,string)": {
+					"details": "Stores data from an IoT device.",
+					"params": {
+						"data": "The encrypted data string.",
+						"deviceId": "The unique identifier of the device."
+					}
+				}
+			},
+			"title": "IoTDataStorage",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/IoTDataStorage.sol": "IoTDataStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/IoTDataStorage.sol": {
+			"keccak256": "0x4f0415035fc8de54f85292240800c0edf52fb64ffb7d010bc09333e936247ea9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e1b6421daaee30bc3b4d617c334f948bb430af7653451fac1395c1de0b93ccd",
+				"dweb:/ipfs/QmYrKfiTkNiffbTs8kEf4fa59M5EumEkCx8gk7poXxhwYh"
+			]
+		},
+		"contracts/IoTDeviceAuth.sol": {
+			"keccak256": "0x91f267d0633988c3b21745dd53480f4bee7a5575c4ddccbdff23d7cf31574cac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dabac537ddbe135a544f06120c101a9cb1cf53c3802d86e042a11f3c5ba1e60a",
+				"dweb:/ipfs/QmTfR7Ai1AQmAbWwN2d1rXzaNfhZiDfbSPhGCCv8tBxFpu"
+			]
+		}
+	},
+	"version": 1
+}

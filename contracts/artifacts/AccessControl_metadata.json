@@ -1,0 +1,222 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_dataStorageAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "AccessGranted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "AccessRevoked",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "checkAccess",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "grantAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "deviceId",
+						"type": "bytes32"
+					}
+				],
+				"name": "revokeAccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "userAccess",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Manages access control policies for IoT data.",
+			"kind": "dev",
+			"methods": {
+				"checkAccess(address,bytes32)": {
+					"details": "Checks if a user has access to a specific device's data.",
+					"params": {
+						"deviceId": "The unique identifier of the IoT device.",
+						"user": "The address of the user."
+					},
+					"returns": {
+						"_0": "bool True if the user has access, false otherwise."
+					}
+				},
+				"grantAccess(address,bytes32)": {
+					"details": "Grants a user access to a specific IoT device's data.",
+					"params": {
+						"deviceId": "The unique identifier of the IoT device.",
+						"user": "The address of the user."
+					}
+				},
+				"revokeAccess(address,bytes32)": {
+					"details": "Revokes a user's access to a specific IoT device's data.",
+					"params": {
+						"deviceId": "The unique identifier of the IoT device.",
+						"user": "The address of the user."
+					}
+				}
+			},
+			"title": "AccessControl",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AccessControl.sol": "AccessControl"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AccessControl.sol": {
+			"keccak256": "0x72741d072fc7b53a0822e48891ee7b5172e1d384fe724683c714e937db38f95d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a17f9203a26179d23d65c42274e0b82cd3e96024ab54af421b3fc5a7fda455ae",
+				"dweb:/ipfs/QmR1LdSuECQJjwfYhYoGXmDkXBcS68fXrGbWQqcPn98ShY"
+			]
+		},
+		"contracts/IoTDataStorage.sol": {
+			"keccak256": "0x4f0415035fc8de54f85292240800c0edf52fb64ffb7d010bc09333e936247ea9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e1b6421daaee30bc3b4d617c334f948bb430af7653451fac1395c1de0b93ccd",
+				"dweb:/ipfs/QmYrKfiTkNiffbTs8kEf4fa59M5EumEkCx8gk7poXxhwYh"
+			]
+		},
+		"contracts/IoTDeviceAuth.sol": {
+			"keccak256": "0x91f267d0633988c3b21745dd53480f4bee7a5575c4ddccbdff23d7cf31574cac",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dabac537ddbe135a544f06120c101a9cb1cf53c3802d86e042a11f3c5ba1e60a",
+				"dweb:/ipfs/QmTfR7Ai1AQmAbWwN2d1rXzaNfhZiDfbSPhGCCv8tBxFpu"
+			]
+		}
+	},
+	"version": 1
+}
